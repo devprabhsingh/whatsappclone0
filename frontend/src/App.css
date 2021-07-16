@@ -1,0 +1,319 @@
+@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&display=swap');
+
+*{
+    padding:0;
+    margin:0;
+    box-sizing:border-box;
+    font-family:'Quicksand', sans-serif;
+}
+body{
+    background-color:rgba(0, 0, 0, 0.9);
+    height:100vh;
+}
+input{
+    width:86%;
+    background-color: rgb(73, 70, 70);
+    outline:none;
+    border:none;
+}
+::placeholder{
+    color:rgb(165, 164, 164);
+    font-weight: 900;
+
+}
+input{
+    caret-color:white;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+  }
+  
+  
+::-webkit-scrollbar-track {
+    background-color:rgba(29, 31, 43, 0.534);
+
+  }
+   
+  
+::-webkit-scrollbar-thumb {
+    background: rgb(73, 72, 72); 
+  }
+  
+
+
+#app-title{
+    color:white;
+    font-size:30px;
+    padding:5px;
+    text-align: center;
+    height:15vh;
+    line-height: 15vh;;
+}
+
+#lastmsg{
+    color:grey;
+}
+#newmsg{
+    color:gold;
+    text-align: right;
+    margin-right:50px;
+}
+#container{
+    height:85vh;
+    display:none;
+    margin:0 30px;
+}
+
+/* styles for add-user form */
+#add-user{
+    width:400px;
+    margin:auto;
+    
+}
+#add-user input{
+    padding:5px;
+    height:35px !important;
+    color:white;
+    display: block;
+    margin:20px auto;
+}
+#add-user input[type="submit"]{
+    color:white;
+    font-size: 20px;
+    background-color: grey !important; 
+    cursor:pointer;
+}
+
+#add-user input[type="submit"]:hover{
+    background-color: rgb(94, 91, 91) !important;
+}
+
+
+
+
+
+
+
+/* styles for  ---------------------*/
+#user-section{
+    width:430px;
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgb(43, 41, 41);
+    padding:5px;
+}
+.profile-pic{
+    margin-left:10px;
+    padding:10px 15px;
+    text-transform: uppercase;
+    border-radius:50%;
+    cursor: pointer;
+    background:purple;
+    color:white;
+}
+i{
+    color: rgb(219, 215, 215);
+    font-size: 20px;
+    cursor: pointer;
+    margin:0 15px;
+}
+.current-username{
+    color:white;
+}
+/*---------------------------------------*/
+
+#contacts-container{
+    width:430px;
+    background-color:rgba(29, 31, 43, 0.534);
+    padding:20px 0;
+}
+#inner-container{
+    height:75vh;
+}
+/* styles for search container---------------------*/
+.searchbox{
+    display: flex;
+    padding:5px;
+    width:80%;
+    margin:0 auto;
+    margin-bottom:20px;
+    background-color: rgb(73, 70, 70);
+    border-radius: 15px;
+
+}
+.fa-search{
+    width:10%;
+    padding:5px;
+    font-size: 15px;
+    background-color: rgb(73, 70, 70);
+    border-radius: 15px;
+    color:rgb(165, 164, 164);
+}
+
+/*---------------------------------------------------*/
+
+/* styles for contacts container-------*/
+
+
+#all-contacts{
+    width:100%;
+    border-top:1px solid rgb(75, 74, 74);
+    height:60vh;
+    overflow:auto;
+}
+.contact{
+    display:flex;
+    color: rgb(219, 215, 215);
+    padding:10px;
+}
+.box1{
+    flex:0.1;
+    margin-right:10px;
+}
+.box2{
+    flex:0.85;
+    display: flex;
+    justify-content: space-between;
+    border-bottom:1px solid rgb(75, 74, 74);
+}
+
+.box2 div:first-child{
+    cursor:pointer;
+    margin-bottom:15px;
+    flex:1;
+}
+
+.fa-chevron-down{
+    display: none;
+}
+.box2 div:hover +.timearrow{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.box2 div:hover +.timearrow .fa-chevron-down{
+    display: block;
+}
+.name{
+    font-size: 20px;
+}
+.lastMsg,.time{
+    font-size: 14px;
+    color:rgb(165, 164, 164);
+}
+.time{
+    margin-right:10px;
+    align-items: flex-start;
+}
+
+/*---------------------------------------*/
+
+/*styles for chat-section-----------*/
+#chat-section{
+    width:100%;
+    min-width: 430px;
+    border-left:1px solid rgb(75, 74, 74);
+}
+#chat-header{
+    display:flex;
+    justify-content:space-between;
+    align-items: center;
+    background-color: rgb(43, 41, 41);
+    padding:5px;
+}
+#info1{
+    display:flex;
+    width:50%;
+    color:rgb(255, 249, 249);
+}
+#info1 p{
+    margin-right:10px;
+}
+#info2 i{
+    background-color: rgb(43, 41, 41);
+}
+#chat-area{
+    height:65vh;
+    overflow-y: auto;
+    position: relative;
+    background-image: url(https://i.pinimg.com/originals/97/c0/07/97c00759d90d786d9b6096d274ad3e07.png);
+    background-size: cover;
+    background-position: center;
+}
+.msg-box{
+    background: transparent;
+    display: flex;
+    justify-content: flex-end;
+}
+.my-message{
+    max-width: 80%;
+    color:white;
+    background:#066162;
+    padding:10px;
+    border-radius: 15px;
+    margin:10px;
+}
+.my-message sub{
+    color:rgb(179, 184, 184);
+    font-size: 12px;
+    margin-left: 8px;
+}
+.o-msg-box{
+    background: transparent;
+    display: flex;
+    justify-content: flex-start;
+}
+.other-message{
+    max-width: 80%;
+    color:white;
+    background:#252D30;
+    padding:10px;
+    border-radius: 15px;
+    margin:10px;
+}
+.other-message sub{
+    color:rgb(179, 184, 184);
+    font-size: 12px;
+    margin-left: 8px;
+}
+.msg-send-box{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background-color: rgb(43, 41, 41);
+    padding:15px;
+
+}
+.msg-send-box input{
+    flex:0.9;
+    border-radius: 15px;
+    padding:10px;
+    outline:none;
+    border:none;
+    color:white;
+    font-weight: 400;
+}
+
+/*---------------------------------------*/
+
+#info-screen{
+    height:80vh;
+    width:80%;
+    margin: auto;
+    padding:50px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+#info-screen img{
+    height:200px;
+    width:350px;
+}
+#info-screen p{
+    font-size: 25px;
+    color:white;
+}
